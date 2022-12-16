@@ -12,7 +12,7 @@ dic = {0 : 'Normal', 1 : 'Doubtful', 2 : 'Mild', 3 : 'Moderate', 4 : 'Severe'}
 
 #Image Size
 img_size=256
-model = load_model('model2_py.py')
+model = load_model('model_saved.py')
 
 model.make_predict_function()
 
@@ -30,9 +30,7 @@ def predict_label(img_path):
 def main():
     return render_template("index.html")
 
-@app.route("/about")
-def about_page():
-    return "Please subscribe  Artificial Intelligence Hub..!!!"
+
 
 @app.route("/predict", methods = ['GET', 'POST'])
 def upload():
